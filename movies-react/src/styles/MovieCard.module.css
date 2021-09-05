@@ -1,0 +1,19 @@
+.movieCard{
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.movieImg{
+    border-radius: 10px;
+    background-color: azure;
+}
+
+.movieImg:hover{
+    transform: scale(1.05);
+    opacity: 0.8;
+}
+
+.titulos{
+    text-align: center;
+    color: #A7A9BE;
+}
