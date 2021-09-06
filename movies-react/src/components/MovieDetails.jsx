@@ -36,12 +36,12 @@ export default function MovieDetails() {
 
             <div className={styles.col}>
                 <p className={styles.titulo}><strong>{pelicula.title}</strong></p>
-                <p><strong>Descripcion:</strong> {pelicula.overview}</p>
-                <p><strong>Generos:</strong> {pelicula.genres.map(gen => gen.name).join(", ")}</p>
-                <p><strong>Lanzamiento:</strong> {pelicula.release_date}</p>
+                <p><strong>Description:</strong> {pelicula.overview}</p>
+                <p><strong>Genres:</strong> {pelicula.genres.map(gen => gen.name).join(", ")}</p>
+                <p><strong>Release date:</strong> {pelicula.release_date}</p>
                 <div className={styles.buttons}>
-                <Link to="/"><button className={styles.back}><strong>Volver</strong></button></Link>
-                <button className={styles.play}><strong>Reproducir</strong></button>
+                <Link to="/"><button className={styles.back}><strong>Go Back</strong></button></Link>
+                <button className={styles.play}><strong>▶ Play</strong></button>
                 </div>
                 </div>
         </div>
