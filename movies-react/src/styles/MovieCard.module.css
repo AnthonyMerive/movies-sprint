@@ -14,6 +14,12 @@
 }
 
 .titulos{
-    text-align: center;
-    color: #A7A9BE;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+
+.voto{
+    color: #414141;
+    margin-left: 20px;
 }

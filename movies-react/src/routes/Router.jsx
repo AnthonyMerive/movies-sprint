@@ -20,9 +20,18 @@ export default function Routes() {
                 <App />
             </Route>
 
-            <Route exact path="/detalles/:id">
+            <Route exact path="/details/:id">
                 <MovieDetails />
             </Route>
+
+            <Route exact path="/mostvoted">
+                
+            </Route>
+
+            <Route exact path="/leastvoted">
+                
+            </Route>
+
         </Switch>
 
 
