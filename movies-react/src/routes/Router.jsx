@@ -4,6 +4,8 @@ import MostVoted from '../components/MostVoted'
 import LeastVoted from '../components/LeastVoted'
 import MovieList from '../components/MoviesList'
 import Navbar from '../components/Navbar'
+import Register from '../components/Register'
+import UserContainer from '../containers/UserContainer'
 
 import {
     BrowserRouter as Router,
@@ -32,6 +34,14 @@ export default function Routes() {
 
             <Route exact path="/leastvoted">
                 <LeastVoted />
+            </Route>
+
+            <Route exact path="/login">
+                <UserContainer />
+            </Route>
+
+            <Route exact path="/register">
+                <Register />
             </Route>
 
         </Switch>
