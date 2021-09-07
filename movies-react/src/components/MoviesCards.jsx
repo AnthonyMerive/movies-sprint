@@ -1,10 +1,12 @@
 import React from 'react'
 import styles from '../styles/MovieCard.module.css'
 import { Link } from 'react-router-dom'
+
 export default function MoviesCards({ movie }) {
 
     const imgURL = "https://image.tmdb.org/t/p/w300" + movie.poster_path
 
+    const v = movie.vote_average;
 
     return (<>
 
@@ -14,7 +16,7 @@ export default function MoviesCards({ movie }) {
             </Link>
             <div className={styles.titulos}>
                 <span>{movie.title}</span>
-                <span className={styles.voto}>{movie.vote_average}</span>
+                <p className={v >=7 ? 'text-success' : 'text-danger'}>{movie.vote_average}</p>
             </div>
         </li>
 

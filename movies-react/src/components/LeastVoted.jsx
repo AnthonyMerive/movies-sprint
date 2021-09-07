@@ -3,12 +3,12 @@ import { useEffect, useState } from 'react'
 import MovieCard from './MoviesCards'
 import styles from '../styles/MovieList.module.css'
 
+export default function LeastVoted() {
 
-export default function MoviesList() {
-    
     const [peliculas, setPeliculas] = useState([]);
     
     useEffect(() => {
+
         fetch("https://api.themoviedb.org/3/discover/movie", {
 
             headers: {
@@ -20,15 +20,18 @@ export default function MoviesList() {
         .then(result => result.json())
         .then(data => setPeliculas(data.results))
     },[]); 
-  
-    return (
-        <div>
-            <h2 className={styles.estrenos}>⭐ Latest Releases ⭐</h2>
-            <ul className={styles.movieGrid}>  
-                {peliculas.map(movie =>
+
+
+    let filter = peliculas.filter(peli => peli.vote_average < 7)
+    console.log(filter)
+
+    return (<div>
+        <ul className={styles.movieGrid}>
+
+            {filter.map(movie =>
                     <MovieCard key={movie.id}  movie={movie}/>
-                    )}
-            </ul>
-        </div>
-    )
+                    )
+            }
+        </ul>
+    </div>)
 }

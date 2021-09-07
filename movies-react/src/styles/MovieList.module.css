@@ -1,3 +1,9 @@
+.estrenos{
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+}
+
 .movieGrid{
     display: grid;
     grid-template-columns: repeat(auto-fill, 230px);

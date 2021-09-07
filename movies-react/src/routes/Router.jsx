@@ -1,6 +1,8 @@
 import React from 'react'
 import MovieDetails from '../components/MovieDetails'
-import App from '../App'
+import MostVoted from '../components/MostVoted'
+import LeastVoted from '../components/LeastVoted'
+import MovieList from '../components/MoviesList'
 import Navbar from '../components/Navbar'
 
 import {
@@ -17,7 +19,7 @@ export default function Routes() {
 
         <Switch>
             <Route exact path="/">
-                <App />
+                <MovieList />
             </Route>
 
             <Route exact path="/details/:id">
@@ -25,11 +27,11 @@ export default function Routes() {
             </Route>
 
             <Route exact path="/mostvoted">
-                
+                <MostVoted />
             </Route>
 
             <Route exact path="/leastvoted">
-                
+                <LeastVoted />
             </Route>
 
         </Switch>

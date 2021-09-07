@@ -28,8 +28,9 @@ export default function MovieDetails() {
     }
     console.log(pelicula);
     const imgURL = "https://image.tmdb.org/t/p/w300" + pelicula.poster_path
-
+    
     return (<>
+        
         <div className={styles.container}>
 
             <img src={imgURL} alt="{pelicula.title}" />
