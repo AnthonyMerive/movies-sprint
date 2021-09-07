@@ -16,7 +16,7 @@ export default function MoviesCards({ movie }) {
             </Link>
             <div className={styles.titulos}>
                 <span>{movie.title}</span>
-                <p className={v >=7 ? 'text-success' : 'text-danger'}>{movie.vote_average}</p>
+                <p className={v >= 7 ? 'text-success' : 'text-danger'}>{movie.vote_average} {v >= 7 ? '✔️' : '❌'}</p>
             </div>
         </li>
 

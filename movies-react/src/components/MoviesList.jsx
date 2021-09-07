@@ -23,7 +23,7 @@ export default function MoviesList() {
   
     return (
         <div>
-            <h2 className={styles.estrenos}>⭐ Latest Releases ⭐</h2>
+            <h2 className={styles.estrenos}>🎬 Latest Releases 🎥</h2>
             <ul className={styles.movieGrid}>  
                 {peliculas.map(movie =>
                     <MovieCard key={movie.id}  movie={movie}/>

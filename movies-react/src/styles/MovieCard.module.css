@@ -9,7 +9,7 @@
 }
 
 .movieImg:hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
     opacity: 0.8;
 }
 
@@ -20,5 +20,9 @@
 }
 
 .titulos p{
-    margin-left: 20px;
+    font-size: 20px;
+    margin-right: 0px;
+    text-align: right;
+    width: 150px;
+    height: auto;
 }
