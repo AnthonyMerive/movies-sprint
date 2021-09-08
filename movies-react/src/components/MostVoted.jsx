@@ -1,7 +1,24 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import MovieCard from './MoviesCards'
-import styles from '../styles/MovieList.module.css'
+import styled from 'styled-components'
+
+const StyledContainer = styled.div`
+    .estrenos{
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .movieGrid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 230px);
+        gap: 40px;
+        padding: 40px;
+        justify-content: center;
+    }
+`
+
 export default function MostVoted() {
 
     const [peliculas, setPeliculas] = useState([]);
@@ -23,13 +40,15 @@ export default function MostVoted() {
     let filter = peliculas.filter(peli => peli.vote_average >= 7)
     console.log(filter)
 
-    return (<div>
-        <ul className={styles.movieGrid}>
+    return (<StyledContainer>
+
+        <ul className="movieGrid">
 
             {filter.map(movie =>
                     <MovieCard key={movie.id}  movie={movie}/>
                     )
             }
         </ul>
-    </div>)
+
+    </StyledContainer>)
 }
