@@ -39,13 +39,13 @@ export default function MoviesList() {
     console.log(`https://image.tmdb.org/t/p/w300${movie.poster_path}`))
     
     return (<StyledContainer>
-
+        
             <h2 className="estrenos">Latest Releases 🎬</h2>
             <ul className="movieGrid">
                 {peliculas.map(movie =>
                     <MovieCard key={movie.id} movie={movie} />
                 )}
             </ul>
-            
+
         </StyledContainer>)
 }
