@@ -1,10 +1,23 @@
 import React from 'react'
 import { useEffect, useState } from 'react'
 import MovieCard from './MoviesCards'
+import styled from 'styled-components'
 
-import styles from '../styles/MovieList.module.css'
+const StyledContainer = styled.div`
+    .estrenos{
+        color: white;
+        text-align: center;
+        margin-top: 20px;
+    }
 
-
+    .movieGrid{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 230px);
+        gap: 40px;
+        padding: 40px;
+        justify-content: center;
+    }
+`
 export default function MoviesList() {
 
     const [peliculas, setPeliculas] = useState([]);
@@ -25,12 +38,14 @@ export default function MoviesList() {
     peliculas.map(movie =>
     console.log(`https://image.tmdb.org/t/p/w300${movie.poster_path}`))
     
-    return (<div>
-            <h2 className={styles.estrenos}>Latest Releases 🎬</h2>
-            <ul className={styles.movieGrid}>
+    return (<StyledContainer>
+
+            <h2 className="estrenos">Latest Releases 🎬</h2>
+            <ul className="movieGrid">
                 {peliculas.map(movie =>
                     <MovieCard key={movie.id} movie={movie} />
                 )}
             </ul>
-        </div>)
+            
+        </StyledContainer>)
 }

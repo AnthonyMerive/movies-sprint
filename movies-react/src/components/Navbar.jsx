@@ -1,6 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import styled from 'styled-components'
 
+const StyledImg = styled.img`
+width: 35px;
+margin-right: 10px;
+`
 export default function Navbar() {
     return (<>
                         
@@ -20,8 +25,9 @@ export default function Navbar() {
                         </li>
                     </ul>
                     <form className="d-flex">
+                    <Link to="/login"><StyledImg src="https://res.cloudinary.com/df8qzqymf/image/upload/v1631059145/Microsoft_Account_c4ealf.svg" alt="" srcset="" /></Link>
                         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                        <button className="btn btn-outline-warning" type="submit">Search</button>
+                        <button className="btn btn-outline-primary" type="submit">Search</button>
                     </form>
                 </div>
             </div>
